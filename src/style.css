@@ -1,0 +1,373 @@
+/* Genel Ayarlar */
+body {
+  background: radial-gradient(circle, #1a1a1a, #000000); /* Merkezden koyulaşan geçiş */
+  color: #fff; /* Yazılar açık renk */
+  margin: 0;
+  padding: 0;
+  background: url('https://via.placeholder.com/200') repeat fixed;
+  animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Gotik Yazı Tipi */
+@import url('https://fonts.googleapis.com/css2?family=Vampire+Wars&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dash&display=swap');
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Vampire Wars', cursive;
+}
+
+body.dark-mode {
+  background: radial-gradient(circle, #000000, #1a1a1a);
+  color: #fff;
+}
+
+.logo {
+  font-family: 'Dash', sans-serif;
+}
+
+/* Logo ve Header */
+header {
+  background: #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.menu a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 20px; /* Font size increased for better visibility */
+  text-transform: uppercase;
+  padding: 10px 20px; /* Padding for navbar items */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background: #bb86fc;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Kahraman Bölümü */
+.hero {
+  background: url('src/images/hero-bg.jpg') no-repeat center center/cover;
+  color: #e0e0e0;
+  padding: 100px 20px;
+  text-align: center;
+  border-bottom: 5px solid #c3a6ff;
+  margin-top: 80px; /* Adjust for fixed header */
+}
+
+.hero h2 {
+  font-size: 58px; /* Font size increased for better visibility */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 28px; /* Font size increased for better visibility */
+}
+
+/* Kitap Hover Efekti */
+.book {
+  position: relative;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  margin: 15px;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.book.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.book:hover {
+  transform: scale(1.05); /* Büyüme efekti */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Hafif beyaz bir gölge */
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid #bb86fc;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.book img:hover {
+  box-shadow: 0 0 20px rgba(187, 134, 252, 1); /* Gece parlama efekti */
+  border-color: #ffffff; /* Üzerine gelince beyaz */
+}
+
+.book .info {
+  padding: 10px;
+  text-align: center;
+  background: #111;
+  font-size: 22px; /* Font size increased for better visibility */
+}
+
+/* Kitaplar için Grid */
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Kitap Detayları */
+.book-details-container {
+  display: flex;
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.book-image {
+  flex: 1;
+}
+
+.book-image img {
+  width: 100%;
+  height: auto;
+}
+
+.book-info {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.comments-section {
+  margin: 20px;
+}
+
+#comment-input {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+/* Bölüm Detayları */
+.chapter-content {
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#chapter-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#chapter-text {
+  margin-bottom: 20px;
+}
+
+/* Başlıklar ve Çizgiler */
+h2 {
+  position: relative;
+  font-size: 2rem;
+  color: #bb86fc;
+}
+
+h2:before,
+h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: #bb86fc;
+}
+
+h2:before {
+  left: -60px;
+}
+
+h2:after {
+  right: -60px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 0;
+  height: 2px;
+  background: #bb86fc;
+  transition: width 0.5s ease;
+}
+
+h2:hover::after {
+  width: 50%;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #bb86fc, transparent);
+  margin: 20px auto;
+  width: 50%;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: #bb86fc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.lightbox p {
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Scroll to Top */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c3a6ff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 100%;
+    height: auto;
+  }
+
+  .book-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+}
