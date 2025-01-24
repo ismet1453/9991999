@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02Read - Gothic Books</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vampire+Wars&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dash&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle">☾</button>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo" style="font-family: 'Dash', sans-serif;">☨ 02Read ☨</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">† Home †</a></li>
+                    <li><a href="#novels">† Novels †</a></li>
+                    <li><a href="#favorites">† Favorites †</a></li>
+                    <li><a href="#register">† Register †</a></li>
+                    <li><a href="#payments">† Payments †</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2 style="font-family: 'Vampire Wars', sans-serif;">Welcome to 02Read</h2>
+                <p style="font-family: 'Vampire Wars', sans-serif;">Discover the darkest tales and gothic stories.</p>
+            </div>
+            <h2 style="font-family: 'Vampire Wars', sans-serif;">† Featured Books †</h2>
+            <div class="book-grid">
+                <div class="book" data-id="1">
+                    <img src="src/images/1.jpg" alt="Book 1">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 1</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="2">
+                    <img src="src/images/2.jpg" alt="Book 2">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 2</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="3">
+                    <img src="src/images/3.jpg" alt="Book 3">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 3</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="novels" style="display:none;">
+            <h2 style="font-family: 'Vampire Wars', sans-serif;">† All Novels †</h2>
+            <div class="book-grid">
+                <div class="book" data-id="1">
+                    <img src="src/images/1.jpg" alt="Book 1">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 1</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="2">
+                    <img src="src/images/2.jpg" alt="Book 2">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 2</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="3">
+                    <img src="src/images/3.jpg" alt="Book 3">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 3</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="4">
+                    <img src="src/images/4.jpg" alt="Book 4">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 4</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="5">
+                    <img src="src/images/5.jpg" alt="Book 5">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 5</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="6">
+                    <img src="src/images/6.jpg" alt="Book 6">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 6</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="7">
+                    <img src="src/images/7.jpg" alt="Book 7">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 7</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="8">
+                    <img src="src/images/8.jpg" alt="Book 8">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 8</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="9">
+                    <img src="src/images/9.jpg" alt="Book 9">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 9</h3>
+                    </div>
+                </div>
+                <div class="book" data-id="10">
+                    <img src="src/images/10.jpg" alt="Book 10">
+                    <div class="info">
+                        <h3 style="font-family: 'Vampire Wars', sans-serif;">Book Title 10</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-details" style="display:none;">
+            <div class="book-details-container">
+                <div class="book-image">
+                    <img id="book-image" src="" alt="Book Image">
+                </div>
+                <div class="book-info">
+                    <h2 id="book-title">Book Title</h2>
+                    <p id="book-description">Book description goes here...</p>
+                    <h3>Chapters</h3>
+                    <ul id="chapters-list">
+                        <!-- Dynamically added -->
+                    </ul>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments-list">
+                    <!-- Dynamically added -->
+                </div>
+                <textarea id="comment-input" placeholder="Write your comment here..."></textarea>
+                <button id="submit-comment">Submit Comment</button>
+            </div>
+        </section>
+
+        <section id="chapter-details" style="display:none;">
+            <div class="chapter-content">
+                <h2 id="chapter-title">Chapter Title</h2>
+                <div id="chapter-text">
+                    <p>Chapter text goes here...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections -->
+        <section id="favorites" style="display:none;">
+            <h2>† Favorites †</h2>
+            <p>You can see your favorite books here.</p>
+        </section>
+        <section id="register" style="display:none;">
+            <h2>† Register †</h2>
+            <p>Registration page will be here.</p>
+        </section>
+        <section id="payments" style="display:none;">
+            <h2>† Payments †</h2>
+            <p>Payments page will be here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="about">
+                <h3>☨ About 02Read ☨</h3>
+                <p>Unveiling the darkest stories of literature.</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><span class="icon">☾</span> Instagram</a>
+                <a href="#"><span class="icon">†</span> Twitter</a>
+            </div>
+        </div>
+        <button id="scroll-to-top">☨</button>
+        <p>&copy; 2025 02Read. All rights reserved.</p>
+    </footer>
+
+    <script src="src/index.js"></script>
+</body>
+</html>
